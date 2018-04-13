@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LE JUSTE PRIX</title>
+</head>
+<body>
+    <script>
+        function jeu(){
+        //variable qui sera utilisée pour afficher un message
+        let msg=window.alert(message);
+
+        //variable qui va compter le nombre d'essais
+        let essais =0;   
+ 
+        let nombre(min,max)
+        let min=20;
+        let max=80;
+        }
+
+        
+        //Le Juste Prix
+        function jeu() {
+        function nombre(min, max)
+        {
+        let nb = min + (max-min+1)*Math.random();
+        return Math.floor(nb);
+        }
+         
+        let essais = 1;
+        let min = 20;
+        let max = 80;
+        var nb = nombre(min, max);
+         
+        while(nombre != nb) {
+            var nombre = prompt("Entrer un nombre [nombre de coup(s) : "+ nb_coup +"]" , "Nombre compris entre 1 et 100");
+                nb = 6;
+         
+        if(nombre == "Nombre compris entre 1 et 100") {//Si l(utilisateur appuis sur Ok sans toucher à rien
+        alert("Entrer un nombre entre 1 est 100");
+        continue;
+        }
+        if(nombre == null) {//Annuller
+        alert("Bye !!!");
+        break;
+        }
+        if(isNaN(nombre)) {//Caractere incorrect
+        alert("\"" + nombre + "\" n'est pas un nombre");
+        continue;
+        }
+        if(nombre < 1) {//Nombre trop petit
+        alert(+ nombre + " est trop petit !");
+        continue;
+        }
+        if(nombre > 100) {//Nombre trop grand
+        alert(+ nombre + " est trop grand !");
+        continue;
+        }
+        if(nombre < nb) {//C'est plus !
+        alert("C'est plus !");
+        nb_coup ++;
+        }
+        if(nombre > nb) {//C'est moins !
+        alert("C'est moins !");
+        nb_coup ++;
+        }
+        if(nombre == nb) {//Gagné !
+        alert("Bravo le nombre mystère était "+ nb);
+        break;
+        }
+        }
+         
+        if(nombre != null) {//Si l'utilisateur n'a pas clicke sur "Annuller", on lui affiche le nombre de coups qu'il a fait
+        alert("Tu as gagné en "+ nb_coup +" coup(s)");
+
+    </script>
+</body>
+</html>

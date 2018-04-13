@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>OBJETS</title>
+</head>
+<body>
+  <script>
+
+  //PERSONNAGE NON-JOUEUR
+    let character=new Object();
+      character.name="Mister X";
+      character.age=27;
+      character.items_to_give=["Couteau ","Grenade ","Mitraillette"];
+
+      for (var prop in character) {
+        console.log(`${prop} = ${character[prop]}`);
+
+    function giveItem(){
+      let item=items_to_give[Math.floor(Math.random()*this.length)];
+    }
+  }
+
+
+//SHOP
+
+
+
+  </script>
+</body>
+</html>

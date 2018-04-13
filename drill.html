@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Drill Js</title>
+</head>
+<body>
+  <script>
+//VARIABLES
+
+//DISEUR DE BONNE AVENTURE
+  let metier="web developpeuse";
+  let pays="Italie";
+  let prenom="Sarah";
+  let enfants=1;
+    console.log(" Vous serez " + metier + " et habiterez en " + pays + " et marié à " + prenom + " avec " + enfants + " enfants ");
+
+//CALCULER L'AGE
+  let thisyear=new Date()
+  let bornyear=1985;
+    console.log(thisyear.getFullYear()-bornyear);
+
+//BIENTOT VIEUX
+  let age=32;
+  let agemax=100;
+  let aliment="tiramisu";
+  let consommation=1;
+  let restant=(agemax-age)*(consommation*365);
+    console.log("Il vous reste " + restant + " de " + aliment + " avant d'atteindre l'age de " + agemax + "ans" );
+
+//PRIORITES
+  let result=(1+2)*3+4/2;  //1+2=3  *3   +2
+    console.log(result);
+
+
+//LOGIQUE
+
+//LANGUES
+// let choix=window.prompt("Choisissez votre langue(fr,en,es)");
+//   if(choix=="fr"){
+//     console.log("Bonjour tout le monde!");
+//   }
+//   else if(choix=="es"){
+//     console.log("Holla, Mundo!");
+//   }
+//   else if(choix=="en"){
+//     console.log("Hello World!");
+//   }
+
+//SCORES
+// let resultat=window.prompt("Introduisez votre resultat");
+//   if(resultat>=90){
+//     console.log("Vous avez le rang A");
+//   }
+//   else if(resultat<90){
+//     console.log("Vous avez le rang B");
+//   }
+//   else if(resultat<=50){
+//     console.log("Vous avez le rang C");
+//   }
+
+//METTRE AU PLURIEL
+// let mot="Chocolat";
+// // let nombre=2;
+// let pluriel=window.prompt("Combien de " + mot + "?");
+//   if(pluriel>1){
+//     console.log("Je possède " + pluriel + mot+"s");
+//   }
+//   else{
+//     console.log("Je possède " + pluriel + mot);
+//   }
+
+
+//FONCTIONS
+</script>
+CALCULS
+
+<form>
+  <p>Nombre1: <input name="nombre1" value=""></p>
+  <p>Nombre2: <input name="nombre2" value=""></p>
+  <input type="button" value="Soustraction" onclick="calculsous(this.form)">
+  <input type="button" value="Multiplication" onclick="calculmulti(this.form)">
+  <input type="button" value="Division" onclick="calculdiv(this.form)">
+  <input type="button" value="Pourcentage" onclick="calculpourcent(this.form)">
+  <input type="button" value="Vitesse" onclick="calculvitesse(this.form)">
+</form>
+<script>
+function calculsous(calculsous){
+  let soustraction=calculsous.nombre1.value - calculsous.nombre2.value;
+    alert(soustraction);
+}
+function calculmulti(calculmulti){
+  let multiplication=calculmulti.nombre1.value * calculmulti.nombre2.value;
+    alert(multiplication);
+}
+function calculdiv(calculdiv){
+  let division=calculdiv.nombre1.value / calculdiv.nombre2.value;
+    alert(division);
+}
+function calculpourcent(calculpourcent){
+  let pourcentage=100* calculpourcent.nombre2.value / calculpourcent.nombre1.value;
+    alert(pourcentage+"%");
+}
+function calculvitesse(calculvitesse){
+  let vitesse= calculvitesse.nombre1.value / calculvitesse.nombre2.value;
+    alert(vitesse + "km/h");
+}
+</script>
+
+<!-- BOUCLES -->
+<script>
+//PAIR ET IMPAIR
+// let vingt;
+//   for(vingt=0; vingt<21;vingt++){
+//     if((vingt%2)==0){
+//       console.log(vingt + " est pair");
+//     }
+//     else{
+//       console.log(vingt + " est impair");
+//     }
+//   };
+
+//MULTIPLICATION TABLE
+// let multiple;
+//   for(multiple=0; multiple<11; multiple++){
+//     console.log(multiple * 9);
+//   }
+
+//ASSIGNER DES GRADES    ////////////A CORRIGER
+let cent;
+  function grades(grades){
+    for(cent=0;cent<101;cent++){
+      if (cent>=89){
+        console.log("Pour" + cent + "points, vous avez le grade A");
+      }
+      else if (cent>80){
+        console.log("Pour" + cent + "points, vous avez le grade B");
+      }
+      else if(cent>70){
+        console.log("Pour" + cent + "points, vous avez le grade C");
+      }
+      else if(cent>65){
+        console.log("Pour" + cent + "points, vous avez le grade D");
+      }
+      else{
+        console.log("Pour" + cent + "points, vous avez le grade F");
+      }
+    }
+  }
+
+//PYRAMIDE
+
+//TABLEAUX
+
+//ADDITION
+let chiffres=[1,2,3,4,5,6,7,8,9].reduce(add,0);
+  function add(a,b){
+    return a+b;
+  }
+  console.log(chiffres);
+
+//VOS MEILLEURS CHOIX
+let acteurs=["Johnny Depp","Will Smith","Dwayne Johnson"];
+  console.log("Le numéro 1 est "+acteurs[0]);
+  console.log("Le numéro 2 est "+acteurs[1]);
+  console.log("Le numéro 3 est "+acteurs[2]);
+
+//CLONE
+let personnages=["Mario","Luigi","Peach"];
+let personnages2=["Bowser"];
+  console.log(personnages.concat(personnages2));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>
