@@ -8,8 +8,7 @@
 </head>
 <body>
   <script>
-
-  //PERSONNAGE NON-JOUEUR
+//PERSONNAGE NON-JOUEUR
     let character=new Object();
       character.name="Mister X";
       character.age=27;
@@ -24,7 +23,86 @@
   }
 
 
+
 //SHOP
+  let epee={
+    title:"Excalibur",
+    physic:15,
+    magic:12,
+    minLevel:1,
+    available:true
+  }
+  let hache={
+    title:"Hatcheur",
+    physic:14,
+    magic:11,
+    minLevel:2,
+    available:false
+  }
+  let sceptre={
+    title:"Magical",
+    physic:18,
+    magic:14,
+    minLevel:3,
+    available:true
+  }
+  let baguette={
+    title:"Merlin",
+    physic:16,
+    magic:10,
+    minLevel:4,
+    available:false
+  }
+
+//Afficher tous les objets
+  let objets=[epee,sceptre,baguette];
+    function afficher(){
+      for (obj in objets){
+        console.log(objets[obj]);
+      }
+          }
+  afficher();
+
+//Afficher les objets disponibles
+  function disponible(){
+    for (obj in objets){
+      if (objets[obj].available==true) {
+        console.log(objets[obj]);
+      }
+    }
+  }
+  disponible();
+
+//Afficher les objets dont le niveau minimum est de 10
+  function leveldix(){
+    for (obj in objets){
+      if (objets[obj].minLevel<=10){
+        console.log(objets[obj]);
+      }
+    }
+  }
+  leveldix();
+
+
+//PERSONNAGE
+
+let mainCharacter={
+  name:"Diana",
+  level:19,
+  life:19,
+  weapon:{
+    "name":"Lassot magique",
+    "damage":8
+  },
+
+  attack: function(){
+    let degat = this.level * this.weapon.damage;
+
+    console.log (this.name + " attaque avec l'arme " + this.weapon.name + ", " + "les dégâts sont " + degat);
+       return this.name + " attaque avec l'arme " + this.weapon.name + ", " + "les dégâts sont " + degat ;
+    }
+  }
+  mainCharacter.attack();
 
 
 
