@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Keyboard</title>
+</head>
+<body>
+  <div id="character">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+    nisi ut aliquip ex ea commodo consequat.
+  </div>
+
+  <script>
+//EXERCICE1
+// Crée (en HTML) une DIV avec l'id "character"
+// Faire changer de couleur de fond a cette DIV à chaque fois qu'on appuie sur une numéro de 0 à 9 sur le clavier
+// Tip : utiliser le switch
+let diana=document.getElementById('character');
+let modifcouleur=function(event){
+  let color="";
+    switch(event.key){
+      case "0":
+        color="#d50000";
+      break;
+      case "1":
+        color="#e91e63";
+      break;
+      case "2":
+        color="#aa00ff";
+      break;
+      case"3":
+        color="#5c6bc0";
+      break;
+      case"4":
+        color="#00bfa5";
+      break;
+      case"5":
+        color="#cddc39";
+      break;
+      case"6":
+        color="#ffeb3b";
+      break;
+      case"7":
+        color="#ffa726";
+      break;
+      case"8":
+        color="#bdbdbd";
+      break;
+      case"9":
+        color="#84ffff";
+      break;
+    };
+    diana.style.background=color;
+};
+window.addEventListener('keydown',modifcouleur);
+  </script>
+
+</body>
+</html>
