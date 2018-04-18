@@ -106,3 +106,10 @@ for (let i = olone.children.length-1; i >= 0; i--){
 // pour chaque valeur du tableau crée un élément 'li' crâce à document.createElement()
 // ajouter à chaque 'li' la valeur courrante tableau
 // ensuite ajouter chaque 'li' à l'élément 'ol' précédement sélectionné
+let tablo=["Silent Teacher","Code Monkey", "CodeCombat"]
+tablo.forEach((t) => {
+   let addli = document.createElement('li')
+   addli.innerText=t
+   console.log(addli)
+   olone.appendChild(addli)
+})
