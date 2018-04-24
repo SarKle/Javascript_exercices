@@ -24,13 +24,13 @@
     RESET
   </div>
 
-  <!-- <div id="axe-x"> -->
-  X:<input type="text" id="axe-x">
-  <!-- </div> -->
+  <div id="axe-x">
 
-  <!-- <div id="axe-y"> -->
-  Y:<input type="text" id="axe-y">
-  <!-- </div> -->
+  </div>
+
+  <div id="axe-y">
+
+  </div>
 
 <script>
 //EXERCICE1
@@ -62,8 +62,8 @@ for (let i = hover01.length-1; i>=0;i--){
 //Faire de sorte que lorsque l'on bouge la souris dans la fenêtre, la position sois affiché dans les divs associés
 //Tip : Utiliser l'evenement reçu en argument Tip : Utiliser innerHTML ou innerText
 document.body.onmousemove = function(event) {
-  document.getElementById('axe-x').value=event.clientX;
-  document.getElementById('axe-y').value=event.clientY;
+  document.getElementById('axe-x').innerText=event.clientX;
+  document.getElementById('axe-y').innerText=event.clientY;
 }
 
 </script>

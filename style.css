@@ -1,0 +1,60 @@
+.highlight{
+  opacity:0;
+}
+
+.apparition{
+animation: fadein 3s;
+-moz-animation: fadein 3s; /* Firefox */
+-webkit-animation: fadein 3s; /* Safari et Chrome */
+-o-animation: fadein 3s; /* Opera */
+}
+@keyframes fadein {
+  from {
+    opacity:0;
+    color: white;
+    background-color:grey;
+  }
+  to {
+    opacity:1;
+    color: blue;
+    background-color: #9fa8da;
+  }
+}
+@-moz-keyframes fadein { /* sur Firefox */
+  from {
+    opacity:0;
+    color: white;
+    background-color: grey;
+  }
+  to {
+    opacity:1;
+    color:blue;
+    background-color: #9fa8da;
+  }
+}
+@-webkit-keyframes fadein { /* sur Safari et Chrome */
+    from {
+        opacity:0;
+        color: white;
+        background-color: grey;
+    }
+    to {
+        opacity:1;
+        color: blue;
+        background-color: #9fa8da;
+    }
+}
+@-o-keyframes fadein { /* sur Opera */
+    from {
+        opacity:0;
+        color:white;
+    }
+    to {
+        opacity: 1;
+        color:blue;
+    }
+}
+
+#axe-x{
+  padding-top: 30px;
+}

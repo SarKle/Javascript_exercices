@@ -16,7 +16,14 @@ let green=document.querySelector('.green')
 let yellow=document.querySelector('.yellow')
 let orange=document.querySelector('.orange')
 
+//let sol1=document.querySelector('.sol1')
+
 //lorsque je clique sur une couleur de la classe choices, elle s'ajoute dans la classe réponse
   red.onclick = () => {
       red.classList.add("reponse1");
     }
+
+let proposition=[red,purple,blue,green,yellow,orange]
+  const result = proposition.filter(proposition => proposition.length > 6);
+    console.log(result);
+// expected output: Array ["exuberant", "destruction", "present"]
