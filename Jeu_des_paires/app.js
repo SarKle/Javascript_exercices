@@ -2,6 +2,8 @@ let dosCartes=[0,0,1,1,2,2,3,3,4,4,5,5,6,6]; //paires
 let statutCartes=[0,0,0,0,0,0,0,0,0,0,0,0,0,0];  //cartes de dos
 let retournees=[];   //tableau numéros de cartes retournées
 let trouvees=0; //paires trouvées
+let time=31
+let fin=0;
 
 let images=document.getElementById('tapis').getElementsByTagName('img');
 for (let i=0;i<images.length;i++){
@@ -32,6 +34,27 @@ function init(){
     dosCartes[sort]=save;
   }
 }
+function timer(){
+  document.querySelector('.chrono').innerHTML=time+' sec left';
+    if(time>0){
+      setTimeout(timer, 1000);
+      time--;
+    }
+    else{
+      time=fin;
+    }
+    document.querySelector('.chrono').innerHTML=time+' sec left';
+    if(time<11){
+      document.querySelector('.chrono').style.color="red";
+    }
+    if(time===0){
+      if(!alert("FIN DE LA PARTIE! REJOUER?")){
+        window.location.reload();
+      };
+    }
+  }
+
+  timer();
 
 function programme(num){
   if(retournees.length<2){   //pour avoir max 2 cartes retournées
@@ -43,15 +66,16 @@ function programme(num){
     if(retournees.length==2){
       let newstatut=0;
       if(dosCartes[retournees[0]]==dosCartes[retournees[1]]){
-        document.querySelector('.message').innerHTML="Gooood gooood!"
+        document.querySelector('.message').innerHTML="GOOD GOOD!"
           newstatut=1;
           trouvees++;
       }
       else{
-        document.querySelector('.message').innerHTML="Try again!"
+        document.querySelector('.message').innerHTML="TRY AGAIN!"
           statutCartes[retournees[0]]=newstatut;
           statutCartes[retournees[1]]=newstatut;
       }
+
       setTimeout(function(){
         mixAfficher(retournees[0]);
         mixAfficher(retournees[1]);
