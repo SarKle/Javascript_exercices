@@ -1,0 +1,19 @@
+body{
+  background-image: url('background.jpg');
+  color: #fff9c4;
+  text-align: center;
+  font-style: 'Palatino';
+}
+
+.titre{
+  margin-top: 50px;
+  font-size: 30px;
+}
+
+p{
+  margin-top: 20px;
+}
+
+table{
+  margin-left: 33%;
+}
